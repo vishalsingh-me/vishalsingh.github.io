@@ -88,9 +88,9 @@ export const portfolio: PortfolioContent = {
   location: 'Boston, Massachusetts, United States',
   openTo: ['Artificial Intelligence Intern', 'Machine Learning Intern', 'Software Engineer Intern'],
   hero: {
-    headline: 'Full Stack engineer growing into AI.',
+    headline: 'Full Stack engineer studying AI systems.',
     subtext:
-      'I build reliable web experiences with React, Next.js, and TypeScript. I am exploring ML and computer vision through practical projects.',
+      'MS CS at Boston University focusing on ML, NLP, computer vision, and LLM/RAG architecture while shipping dependable web experiences with React, Next.js, and TypeScript.',
     ctas: [
       { label: 'View projects', href: '#projects' },
       { label: 'Download resume', href: '/resume' },

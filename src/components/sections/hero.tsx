@@ -38,7 +38,7 @@ export function Hero() {
           </div>
           <div className="space-y-3">
             <p className="text-sm text-muted-foreground">
-              MS CS @ Boston University | Ex-SWE II (Appinventiv) | Ex-SDE I (Newgen)
+              MS CS @ Boston University (AI track) | Ex-SWE II (Appinventiv) | Ex-SDE I (Newgen)
             </p>
             <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
               {portfolio.hero.headline}
@@ -64,7 +64,7 @@ export function Hero() {
             </div>
             <div>
               <p className="text-lg font-semibold text-foreground">AI and software</p>
-              <p>Interested in practical ML and dependable systems</p>
+              <p>Hands-on with ML, NLP, computer vision, and LLM/RAG patterns</p>
             </div>
             <div>
               <p className="text-lg font-semibold text-foreground">Builder</p>
