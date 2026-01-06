@@ -6,12 +6,16 @@ const withMDX = createMDX({
 
 const isPages = process.env.GITHUB_ACTIONS === "true";
 
+// Allow explicit override via env (useful for GitHub Pages project sites)
+const explicitBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? process.env.BASE_PATH;
+
 // Repo name from GitHub Actions, used for project sites like /my-repo
 const repo = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
 const isUserSite = repo.endsWith(".github.io");
 
-// Only set basePath for project sites
-const basePath = isPages && !isUserSite ? `/${repo}` : "";
+// Only set basePath for project sites (or when explicitly provided)
+const basePath =
+  explicitBasePath ?? (isPages && !isUserSite && repo ? `/${repo}` : "");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
