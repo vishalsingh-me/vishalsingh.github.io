@@ -67,7 +67,7 @@ body {
 
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -80px;
   left: 50%;
   transform: translateX(-50%);
   background: hsl(var(--primary));
@@ -75,11 +75,15 @@ body {
   padding: 0.75rem 1rem;
   border-radius: 999px;
   transition: top 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
   z-index: 50;
 }
 
-.skip-link:focus {
+.skip-link:focus-visible {
   top: 16px;
+  opacity: 1;
+  pointer-events: auto;
   outline: none;
 }
 
