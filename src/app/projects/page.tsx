@@ -1,3 +1,5 @@
+'use client';
+
 import { useMemo, useState } from 'react';
 import { portfolio } from '@/data/portfolio';
 import { ProjectCard } from '@/components/sections/project-card';
@@ -52,4 +54,3 @@ export default function ProjectsPage() {
     </div>
   );
 }
-'use client';

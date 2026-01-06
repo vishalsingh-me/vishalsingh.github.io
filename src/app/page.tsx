@@ -7,7 +7,6 @@ import { StartupHighlight } from '@/components/sections/startup-highlight';
 import { Awards } from '@/components/sections/awards';
 import { Education } from '@/components/sections/education';
 import { Contact } from '@/components/sections/contact';
-import { BlogSection } from '@/components/sections/blog-section';
 import { Now } from '@/components/sections/now';
 import { Certifications } from '@/components/sections/certifications';
 
@@ -24,7 +23,6 @@ export default function HomePage() {
       <Education />
       <Certifications />
       <Now />
-      {/* <BlogSection /> */}
       <Contact />
     </div>
   );

@@ -45,15 +45,6 @@ export type AwardItem = {
   description: string;
 };
 
-export type BlogSummary = {
-  slug: string;
-  title: string;
-  description: string;
-  date: string;
-  readTime: string;
-  tags: string[];
-};
-
 export type PortfolioContent = {
   name: string;
   role: string;
@@ -89,7 +80,6 @@ export type PortfolioContent = {
     phone?: string;
     socials: LinkItem[];
   };
-  blog: BlogSummary[];
 };
 
 export const portfolio: PortfolioContent = {
@@ -290,22 +280,4 @@ export const portfolio: PortfolioContent = {
       { label: 'Twitter', href: '#' }, // TODO: add personal Twitter link
     ],
   },
-  blog: [
-    {
-      slug: 'road-safety-analytics',
-      title: 'How computer vision can nudge safer roads in India',
-      description: 'Notes from a low cost prototype for spotting overspeeding and missing seat belts.',
-      date: '2024-06-10',
-      readTime: '6 min',
-      tags: ['computer vision', 'safety', 'prototyping'],
-    },
-    {
-      slug: 'front-end-to-ai',
-      title: 'From front-end craft to AI engineering',
-      description: 'Why strong UX skills help when building AI features that people can trust.',
-      date: '2024-05-22',
-      readTime: '5 min',
-      tags: ['front-end', 'ai', 'career'],
-    },
-  ],
 };

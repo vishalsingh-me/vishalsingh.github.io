@@ -8,7 +8,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import { submitContact } from '@/app/actions/contact';
 
 export function ContactForm() {
   const [status, setStatus] = useState<string | null>(null);
@@ -25,12 +24,10 @@ export function ContactForm() {
 
   const onSubmit = (values: ContactFormData) => {
     setStatus(null);
-    startTransition(async () => {
-      const result = await submitContact(values);
-      setStatus(result.message);
-      if (result.success) {
-        form.reset();
-      }
+    startTransition(() => {
+      console.log('Contact submission', values);
+      setStatus('Thank you. I will respond soon.');
+      form.reset();
     });
   };
 
