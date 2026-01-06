@@ -8,6 +8,9 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 export function Hero() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+  const heroImage = `${basePath}/images/Vishal.png`;
+
   return (
     <section className="relative overflow-hidden rounded-3xl border border-border/60 bg-card/60 px-4 py-12 shadow-soft md:px-10">
       <div className="absolute left-10 top-10 h-32 w-32 rounded-full bg-primary/20 blur-3xl" />
@@ -80,7 +83,7 @@ export function Hero() {
             <div className="absolute inset-0 rounded-full ring-2 ring-primary/30 dark:ring-primary/50" />
             <div className="relative h-full w-full overflow-hidden rounded-full bg-background">
               <Image
-                src="/images/Vishal.png"
+                src={heroImage}
                 alt="Vishal Singh portrait"
                 width={440}
                 height={440}
