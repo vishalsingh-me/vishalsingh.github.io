@@ -3,7 +3,7 @@ import { About } from '@/components/sections/about';
 import { SkillsGrid } from '@/components/sections/skills-grid';
 import { Timeline } from '@/components/sections/timeline';
 import { ProjectGrid } from '@/components/sections/project-grid';
-import { StartupHighlight } from '@/components/sections/startup-highlight';
+// import { StartupHighlight } from '@/components/sections/startup-highlight';
 import { Awards } from '@/components/sections/awards';
 import { Education } from '@/components/sections/education';
 import { Contact } from '@/components/sections/contact';
@@ -18,7 +18,7 @@ export default function HomePage() {
       <SkillsGrid />
       <Timeline />
       <ProjectGrid />
-      <StartupHighlight />
+      {/* <StartupHighlight /> */}
       <Awards />
       <Education />
       <Certifications />

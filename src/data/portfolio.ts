@@ -37,6 +37,7 @@ export type EducationItem = {
   program: string;
   period: string;
   details: string;
+  logo?: string;
 };
 
 export type AwardItem = {
@@ -107,12 +108,26 @@ export const portfolio: PortfolioContent = {
   skills: [
     {
       category: 'Full Stack',
-      items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion', 'Zod', 'JSON'],
+      items: [
+        'PyTorch',
+        'PostgreSQL',
+        'Figma',
+        'FastAPI',
+        'React',
+        'Next.js',
+        'TypeScript',
+        'JavaScript',
+        'Tailwind CSS',
+        'shadcn/ui',
+        'Framer Motion',
+        'Zod',
+        'JSON',
+      ],
     },
-    {
-      category: 'Architecture',
-      items: ['Component systems', 'Design systems', 'Server Actions', 'API integration', 'REST APIs', 'Performance tuning', 'Accessibility'],
-    },
+    // {
+    //   category: 'Architecture',
+    //   items: ['Component systems', 'Design systems', 'Server Actions', 'API integration', 'REST APIs', 'Performance tuning', 'Accessibility'],
+    // },
     {
       category: 'AI / Data',
       items: ['Python', 'Computer vision basics', 'OpenCV', 'Edge AI prototypes', 'Data storytelling', 'Analytics dashboards'],
@@ -248,12 +263,14 @@ export const portfolio: PortfolioContent = {
       program: 'Master of Science (MS), Computer Science',
       period: 'Sep 2025 - May 2027',
       details: 'Graduate studies in Computer Science.',
+      logo: '/images/boston-university.png',
     },
     {
       school: 'IILM University, Greater Noida',
       program: 'B.Tech, Computer Science',
       period: '2016 - 2020',
       details: 'Grade: 7.7/10.',
+      logo: '/images/iilm-university.png',
     },
   ],
   certifications: [
@@ -272,7 +289,7 @@ export const portfolio: PortfolioContent = {
   ],
   interests: ['ML for healthcare systems', 'Computer vision', 'Road safety analytics', 'Building scalable, accessible front-end systems'],
   contact: {
-    email: 'hello@vishal.dev',
+    email: 'hello@vishal.info',
     // TODO: Add phone if you want to display it
     socials: [
       { label: 'LinkedIn', href: '#' }, // TODO: add personal LinkedIn link

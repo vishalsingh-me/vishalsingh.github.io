@@ -3,6 +3,15 @@ import { portfolio } from '@/data/portfolio';
 import { SectionHeading } from './section-heading';
 import { Card } from '@/components/ui/card';
 import { ContactForm } from './contact-form';
+import { Github, Linkedin, Twitter } from 'lucide-react';
+
+const socialIcons: Record<string, JSX.Element> = {
+  linkedin: <Linkedin className="h-4 w-4" aria-hidden="true" />,
+  github: <Github className="h-4 w-4" aria-hidden="true" />,
+  twitter: <Twitter className="h-4 w-4" aria-hidden="true" />,
+};
+
+const getSocialIcon = (label: string) => socialIcons[label.toLowerCase()];
 
 export function Contact() {
   return (
@@ -18,7 +27,7 @@ export function Contact() {
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>Email: <Link href={`mailto:${portfolio.contact.email}`} className="text-foreground hover:underline">{portfolio.contact.email}</Link></p>
               {portfolio.contact.phone ? <p>Phone: {portfolio.contact.phone}</p> : null}
-              <p>I usually reply within 1-2 days.</p>
+              <p>I usually reply within 1-2 Hours.</p>
             </div>
           </Card>
           <Card className="p-6 space-y-3">
@@ -28,9 +37,10 @@ export function Contact() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="rounded-full bg-muted/60 px-3 py-1 text-sm font-medium text-foreground transition hover:bg-muted"
+                  className="inline-flex items-center gap-2 rounded-full bg-muted/60 px-3 py-1 text-sm font-medium text-foreground transition hover:bg-muted"
                 >
-                  {item.label}
+                  {getSocialIcon(item.label)}
+                  <span>{item.label}</span>
                 </Link>
               ))}
             </div>
